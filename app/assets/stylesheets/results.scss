@@ -1,0 +1,187 @@
+// Place all the styles related to the results controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
+a {
+  color: inherit;
+}
+
+// 検索キーワード
+.container-count {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align:center;
+  // 検索引っかかったレコード数
+  h4 {
+    padding-top: 110px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    color: #b3aeb5;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+  span.judged {
+    font-size: 80px;
+    color: black;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+}
+
+// 検索キーワード
+.container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 15px;
+  padding-bottom: 110px;
+  margin: 0 auto;
+  text-align:center;
+  // 検索引っかかったレコード数
+  h4 {
+    padding-top: 110px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    color: #b3aeb5;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+  span.judged {
+    font-size: 80px;
+    color: black;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+}
+
+
+.res-name {
+  margin-top: 80px;
+  margin-bottom: 0px;
+  text-align: center;
+  h1 {
+    padding-top: 10px;
+    font-size: 2vw;
+    color: black;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+  span {
+    font-size: 25px;
+    color: #b3aeb5;
+  }
+}
+
+
+/* 検索結果を保存する ================================ */
+
+input#save_button{
+  outline:none;
+  color: grey;
+  // font-weight: bold;
+  margin-top: 0.8em;
+  border-radius: 3px;
+  // background-color: #AAA4AC;
+  border-style: solid; border-width: medium;
+  // box-shadow: 1px 2px #555;
+  &:hover {
+    color: #AAA4AC;
+  }
+  &:active{
+    // box-shadow: none;
+  }
+}
+
+
+/* result box ================================ */
+
+.result-box{
+  width: 100%;
+  font-size: 24px;
+  text-align: left;
+  border-bottom: 4px solid #eee;
+  padding-bottom: 170px;
+}
+.insurance-title{
+  margin-bottom: 0px;
+}
+
+.kokuho-box {
+  margin-top: 0px;
+}
+
+.kokuho {
+  color:#27B2FF;
+  margin-bottom: 0px;
+}
+.kouki {
+  color:#4112AA;
+}
+.kaigo {
+  color:#C40087;
+}
+
+
+/* 検索結果表示 ================================ */
+
+.result-number{
+  font: bold 60px "Futura";
+  /* font-size: 60px; */
+  color: black;
+  text-align: center;
+  margin-top:20px;
+  bottom:0px;
+}
+
+.result-number span{
+  font-size:18px;
+  color:#b3aeb5;
+}
+
+.child-box{
+  font-size: 18px;
+  float: left;
+  width:25%;
+  color: #b3aeb5;
+  padding-left: 30px;
+}
+
+.child-box p{
+  margin-bottom: 0;
+  margin-top:7px;
+}
+.child-box span{
+  color: #b3aeb5;
+}
+
+/* ダウンロードボタン */
+
+.message-wrapper {
+  /* padding-bottom: 80px; */
+  margin-top: 40px;
+  text-align: center;
+  bottom:5px;
+  color: white;
+  a.dl-link　{
+    display: block;
+    background-color: #eee;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #eee;
+    padding: 1em;
+  }
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #27B2FF;
+  cursor: pointer;
+  box-shadow: 2px 3px #555;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+.message-wrapper span{
+  color: white;
+}

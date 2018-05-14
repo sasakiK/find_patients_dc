@@ -1,0 +1,38 @@
+// Place all the styles related to the downloads controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "variables";
+
+
+.container-dl {
+  margin-bottom: 0px;
+  text-align: center;
+  h1 {
+    font-size: 3vw;
+    color: grey;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+  span {
+    font-size: 5vw;
+    color: $purpule;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+}
+
+.res-namedl {
+  margin-top: 80px;
+  margin-bottom: 0px;
+  text-align: left;
+  h1 {
+    padding-top: 10px;
+    font-size: 2vw;
+    color: black;
+    font-family: 'Futura', 'Noto Sans Japanese', sans-serif;
+  }
+  span {
+    font-size: 35px;
+    color: grey;
+  }
+}

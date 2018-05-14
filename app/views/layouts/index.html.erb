@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FindPatients</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <footer>
+    <!-- signiture -->
+    <div class="container-footer">
+      <div class="signiture">
+        <span>Copyright (C) 2018
+          <%= link_to("Sasaki Kensuke", "https://qiita.com/sasaki_K_sasaki") %>
+         All Rights Reserved. 　 CONTACT : 090-5950-8578</span>
+      </div>
+    </footer>
+    <%= yield %>
+  </body>
+</html>

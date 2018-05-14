@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Patients.</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+  </head>
+<body>
+
+  <!-- title name -->
+  <div class="top-wrapper">
+    <div class="container-title">
+      <h1><span class="letter-color1">F</span>ind
+          <span class="letter-color2">P</span>atients<span class="letter-color3">.</span></h1>
+    </div>
+  </div>
+
+  <!-- search form -->
+  <div class="container">
+    <div class="search-form">
+      <div class="form-div">
+      <%#　検索フォーム %>
+      <%= form_tag results_path, :method => 'get', class: "search", html: { autocomplete: "off" } do %>
+        <p>
+          <%= text_field_tag :search, params[:search], placeholder: "Search..", class: "search-p" %>
+          <%= submit_tag " Find ", :name => nil  %>
+          <!-- <%= image_submit_tag("/search3.png", class:"submit-image") %> -->
+        </p>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

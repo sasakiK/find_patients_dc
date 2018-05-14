@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Patients.</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+  </head>
+<body>
+
+
+  <!-- 検索キーワードが空であれば -->
+  <% if @exist == "none" %>
+    <div class="top-wrapper">
+      <div class="container">
+        <h4>Sorry, fill in the search form...</h4>
+      </div>
+    </div>
+  <% else %>
+    <!-- 検索キーワードに部分一致するresultテーブルのnameがあれば -->
+    <% if @judge != 0 then %>
+      <!-- 部分一致したレコード数 -->
+      <div class="top-wrapper">
+        <div class="container-count">
+          <h4> There are 　<span class="judged"><%= @judge %></span> 　resuts.   　　 <%= button_to_csv %></h4>
+        </div>
+      </div>
+
+      <!-- 検索キーワードに部分一致するresultテーブルのname分だけforで、検索結果を表示する -->
+      <% @results.each do |result| %>
+
+        <div class="res-name">
+          <h1 id="vh"><span> You mean .. :　 </span>「 <%= result.name %> 」 <span> ?</span> </h1>
+        </div>
+
+        <!-- 国保 データ表示 -->
+        <div class="top-wrapper">
+          <div class="container">
+            <!-- 国保の結果ボックス -->
+            <div class="result-box kokuho-box">
+              <h2 class="insurance-title kokuho">K.K.H.</h2>
+              <div class="child-box">
+                <p>レセプト枚数</p>
+                <p>Number of lines.</p>
+                <div class="result-number"> <%= result.kokuho_res1 %> <span>枚</span></div>
+              </div>
+              <div class="child-box">
+                <p>患者数</p>
+                <p>Observed number.</p>
+                <div class="result-number"> <%= result.kokuho_res2 %> <span>人</span></div>
+              </div>
+              <div class="child-box">
+                <p>LTC利用者数</p>
+                <p>LTC user.</p>
+                <div class="result-number"> <%= result.kokuho_res3 %> <span>人</span></div>
+              </div>
+              <div class="child-box">
+                <p>対象患者のデータ</p>
+                <p>Download.</p>
+
+                <div class="message-wrapper">
+                  <span class="btn message">
+                    <%= link_to("Download csv.", "/results/#{result.id}/download",class: "dl-link") %>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- 後期高齢の結果ボックス -->
+            <div class="result-box kouki-box">
+              <h2 class="insurance-title kouki">K.K.</h2>
+              <div class="child-box">
+                <p>レセプト枚数</p>
+                <p>Number of lines.</p>
+                <div class="result-number"> <%= result.kouki_res1 %> <span>枚</span></div>
+              </div>
+              <div class="child-box">
+                <p>患者数</p>
+                <p>Observed number.</p>
+                <div class="result-number"> <%= result.kouki_res2 %> <span>人</span></div>
+              </div>
+              <div class="child-box">
+                <p>LTC利用者数</p>
+                <p>LTC user.</p>
+                <div class="result-number"> <%= result.kouki_res3 %> <span>人</span></div>
+              </div>
+              <div class="child-box">
+                <p>対象患者のデータ</p>
+                <p>Download.</p>
+                <div class="message-wrapper">
+                  <span class="btn message">Download csv.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+    <!-- for文 end -->
+
+    <!-- 検索でヒットした行が0であれば -->
+    <% else %>
+      <div class="top-wrapper">
+        <div class="container">
+          <h4>Sorry, no results...</h4>
+        </div>
+      </div>
+    <% end %>
+    <!-- if文 end -->
+  <% end %>
+</body>
+</html>

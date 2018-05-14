@@ -5,10 +5,10 @@ This application is to search specific patients in your DB.
 App image is like that ...
 
 * Top Page.
-<img src="https://github.com/sasakiK/Images/blob/master/findpatients_top.png?raw=true" width="320px">
+<img src="https://github.com/sasakiK/Images/blob/master/findpatients_top.png?raw=true" width="70%">
 
 * Result Page.
-<img src="https://github.com/sasakiK/Images/blob/master/findpatients_result.png?raw=true" width="320px">
+<img src="https://github.com/sasakiK/Images/blob/master/findpatients_result.png?raw=true" width="70%">
 
 * Ruby version
 
